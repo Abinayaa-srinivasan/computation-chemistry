@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: dermalens
+    runtime: docker
+    plan: free
+    envVars:
+      - key: DERMALENS_SECRET
+        generateValue: true
+      - key: DERMALENS_DB
+        value: /data/dermalens.db

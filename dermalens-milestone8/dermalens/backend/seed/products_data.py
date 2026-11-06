@@ -1,0 +1,147 @@
+"""Sample products and per-category basic-ingredient tables for DermaLens.
+
+ALL products below are FICTIONAL demo products with invented brands, formulas, prices and
+retailer links. They exist only so the app has something to show. Replace them with real
+data (e.g. an Open Beauty Facts export) using seed/load.py; see the README.
+
+Ingredient lists are in label order (highest to lowest concentration), as on real labels.
+"""
+
+# name, brand, category, size, price (INR), image keyword, ingredient list (comma separated)
+PRODUCTS = [
+    ("Velvet Bloom Matte Lipstick", "Lumé Botanics", "lipstick", "3.5 g", 499, "lipstick",
+     "Ricinus Communis Seed Oil, Octyldodecanol, Euphorbia Cerifera Wax, Copernicia Cerifera Wax, Cera Alba, Diisostearyl Malate, Silica, Tocopheryl Acetate, Mica, CI 77891, CI 15850, CI 77491, Parfum"),
+    ("Cherry Gloss Cream Lipstick", "Rosewood Labs", "lipstick", "4 g", 349, "lipstick",
+     "Hydrogenated Polyisobutene, Ricinus Communis Seed Oil, Ozokerite, Cera Alba, Caprylic/Capric Triglyceride, Simmondsia Chinensis Seed Oil, Tocopherol, CI 45410, CI 77891, Mica, Linalool"),
+    ("Nude Satin Lip Colour", "Aurelia Beauty", "lipstick", "3.8 g", 650, "lipstick",
+     "Octyldodecanol, Ricinus Communis Seed Oil, Euphorbia Cerifera Wax, Copernicia Cerifera Wax, Butyrospermum Parkii Butter, Tocopheryl Acetate, CI 77491, CI 77492, CI 77891, Mica"),
+    ("Soft Focus Liquid Foundation", "Aurelia Beauty", "foundation", "30 ml", 899, "foundation",
+     "Water, Cyclopentasiloxane, Dimethicone, Glycerin, Butylene Glycol, Titanium Dioxide, CI 77891, Phenyl Trimethicone, Silica, Niacinamide, Tocopheryl Acetate, CI 77492, CI 77491, CI 77499, Phenoxyethanol, Ethylhexylglycerin"),
+    ("Skin Veil Serum Foundation", "Lumé Botanics", "foundation", "30 ml", 1199, "foundation",
+     "Water, Dicaprylyl Carbonate, Glycerin, Propanediol, Zinc Oxide, CI 77891, Squalane, Sodium Hyaluronate, Panthenol, Glyceryl Stearate, Cetearyl Alcohol, CI 77492, CI 77491, CI 77499, Xanthan Gum, Phenoxyethanol, Caprylyl Glycol"),
+    ("Matte Control Foundation", "Rosewood Labs", "foundation", "35 ml", 599, "foundation",
+     "Water, Isododecane, Alcohol Denat., Talc, Kaolin, Silica, Titanium Dioxide, Dimethicone, Glycerin, CI 77492, CI 77491, CI 77499, Parfum, Phenoxyethanol"),
+    ("Barrier Repair Moisturiser", "Dermis Daily", "moisturiser", "50 ml", 749, "moisturiser",
+     "Water, Glycerin, Caprylic/Capric Triglyceride, Cetearyl Alcohol, Squalane, Ceramide NP, Ceramide AP, Ceramide EOP, Cholesterol, Phytosphingosine, Panthenol, Sodium Hyaluronate, Glyceryl Stearate, Xanthan Gum, Phenoxyethanol, Ethylhexylglycerin"),
+    ("Rich Shea Night Cream", "Aurelia Beauty", "moisturiser", "50 g", 899, "moisturiser",
+     "Water, Butyrospermum Parkii Butter, Glycerin, Mineral Oil, Cetearyl Alcohol, Stearic Acid, Dimethicone, Glyceryl Stearate, Parfum, Tocopherol, Methylparaben, Propylparaben, Phenoxyethanol"),
+    ("Oil-Free Gel Moisturiser", "Dermis Daily", "moisturiser", "50 ml", 549, "moisturiser",
+     "Water, Glycerin, Niacinamide, Butylene Glycol, Zinc PCA, Panthenol, Carbomer, Sodium Hyaluronate, Allantoin, Triethanolamine, Phenoxyethanol, Caprylyl Glycol, Disodium EDTA"),
+    ("Retinol Renewal Cream", "Rosewood Labs", "moisturiser", "30 ml", 1299, "moisturiser",
+     "Water, Squalane, Glycerin, Caprylic/Capric Triglyceride, Retinol, Cetearyl Alcohol, Bakuchiol, Tocopherol, Panthenol, Sodium Hyaluronate, Xanthan Gum, Phenoxyethanol, Ethylhexylglycerin"),
+    ("Daily Shield Mineral SPF 50", "Sunveil", "sunscreen", "50 g", 699, "sunscreen",
+     "Water, Zinc Oxide, Caprylic/Capric Triglyceride, Glycerin, Cetearyl Alcohol, Glyceryl Stearate, Titanium Dioxide, Aloe Barbadensis Leaf Juice, Tocopherol, Xanthan Gum, Phenoxyethanol"),
+    ("Invisible Fluid SPF 50 PA++++", "Sunveil", "sunscreen", "50 ml", 799, "sunscreen",
+     "Water, Ethylhexyl Salicylate, Homosalate, Butyl Methoxydibenzoylmethane, Octocrylene, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Diethylamino Hydroxybenzoyl Hexyl Benzoate, Glycerin, Niacinamide, Dimethicone, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Alcohol Denat., Parfum, Phenoxyethanol, Tocopherol"),
+    ("Sensitive SPF 30 Lotion", "Dermis Daily", "sunscreen", "100 ml", 599, "sunscreen",
+     "Water, Zinc Oxide, Titanium Dioxide, Glycerin, Squalane, Bisabolol, Allantoin, Panthenol, Glyceryl Stearate, Cetearyl Alcohol, Xanthan Gum, Phenoxyethanol, Caprylyl Glycol"),
+    ("10% Niacinamide Clarifying Serum", "Dermis Daily", "serum", "30 ml", 599, "serum",
+     "Water, Niacinamide, Propanediol, Zinc PCA, Glycerin, Sodium Hyaluronate, Panthenol, Allantoin, Xanthan Gum, Phenoxyethanol, Ethylhexylglycerin"),
+    ("Vitamin C Brightening Serum", "Lumé Botanics", "serum", "30 ml", 999, "serum",
+     "Water, Ascorbic Acid, Propanediol, Glycerin, Ferulic Acid, Tocopherol, Sodium Hyaluronate, Citric Acid, Phenoxyethanol, Ethylhexylglycerin"),
+    ("Glow AHA Exfoliating Serum", "Rosewood Labs", "serum", "30 ml", 849, "serum",
+     "Water, Glycolic Acid, Lactic Acid, Glycerin, Sodium Hydroxide, Panthenol, Aloe Barbadensis Leaf Juice, Hydroxyethylcellulose, Phenoxyethanol, Parfum"),
+    ("Pore Clear BHA Serum", "Dermis Daily", "serum", "30 ml", 649, "serum",
+     "Water, Salicylic Acid, Butylene Glycol, Niacinamide, Zinc PCA, Camellia Sinensis Leaf Extract, Sodium Hyaluronate, Allantoin, Sodium Hydroxide, Phenoxyethanol, Caprylyl Glycol"),
+    ("Pigment Fade Tranexamic Serum", "Lumé Botanics", "serum", "30 ml", 1099, "serum",
+     "Water, Tranexamic Acid, Niacinamide, Arbutin, Propanediol, Glycerin, Glycyrrhiza Glabra Root Extract, Sodium Hyaluronate, Xanthan Gum, Phenoxyethanol, Ethylhexylglycerin"),
+    ("Hydra Plump Hyaluronic Serum", "Aurelia Beauty", "serum", "30 ml", 699, "serum",
+     "Water, Glycerin, Sodium Hyaluronate, Betaine, Panthenol, Propanediol, Allantoin, Xanthan Gum, Phenoxyethanol, Caprylyl Glycol"),
+    ("Gentle Hydrating Cleanser", "Dermis Daily", "cleanser", "150 ml", 449, "cleanser",
+     "Water, Glycerin, Coco-Glucoside, Cocamidopropyl Betaine, Panthenol, Sodium Hyaluronate, Allantoin, Citric Acid, Phenoxyethanol, Caprylyl Glycol"),
+    ("Deep Clean Foaming Face Wash", "Rosewood Labs", "cleanser", "100 ml", 299, "cleanser",
+     "Water, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Glycerin, Sodium Chloride, Salicylic Acid, Parfum, Methylisothiazolinone, Citric Acid"),
+    ("Cica Calm Cream Cleanser", "Lumé Botanics", "cleanser", "120 ml", 549, "cleanser",
+     "Water, Sodium Cocoyl Isethionate, Glycerin, Cetearyl Alcohol, Centella Asiatica Extract, Madecassoside, Panthenol, Phenoxyethanol, Citric Acid"),
+    ("Strength Repair Shampoo", "Strand & Co", "shampoo", "250 ml", 399, "shampoo",
+     "Water, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Glycerin, Hydrolyzed Keratin, Panthenol, Biotin, Sodium Chloride, Parfum, Citric Acid, Phenoxyethanol"),
+    ("Scalp Care Anti-Dandruff Shampoo", "Strand & Co", "shampoo", "250 ml", 449, "shampoo",
+     "Water, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Zinc Pyrithione, Climbazole, Cocamide MEA, Glycerin, Sodium Chloride, Parfum, Citric Acid, Phenoxyethanol"),
+    ("Sulfate-Free Gentle Shampoo", "Strand & Co", "shampoo", "250 ml", 549, "shampoo",
+     "Water, Decyl Glucoside, Coco-Glucoside, Cocamidopropyl Betaine, Glycerin, Panthenol, Aloe Barbadensis Leaf Juice, Sodium Chloride, Citric Acid, Phenoxyethanol, Caprylyl Glycol"),
+    ("Volume Lift Mascara", "Aurelia Beauty", "mascara", "9 ml", 599, "mascara",
+     "Water, Cera Alba, Copernicia Cerifera Wax, Stearic Acid, CI 77499, Acacia Senegal Gum, Glyceryl Stearate, Acrylates Copolymer, Panthenol, Tocopherol, Phenoxyethanol, Ethylhexylglycerin, Disodium EDTA"),
+    ("Waterproof Length Mascara", "Rosewood Labs", "mascara", "8 ml", 449, "mascara",
+     "Isododecane, Trimethylsiloxysilicate, Cera Alba, Copernicia Cerifera Wax, CI 77499, Disteardimonium Hectorite, VP/Eicosene Copolymer, Tocopherol, Propylparaben"),
+]
+
+# category -> list of (ingredient, role in this product type, typical min %, typical max %, why it is used)
+# These are approximate typical ranges for the product TYPE, not exact amounts in any product.
+CATEGORY_BASICS = {
+    "lipstick": [
+        ("Ricinus Communis Seed Oil", "Base oil and gloss", 10, 40, "Dissolves pigments and gives shine."),
+        ("Octyldodecanol", "Emollient", 5, 25, "Glides on smoothly without a greasy feel."),
+        ("Euphorbia Cerifera Wax", "Structure wax", 3, 12, "Holds the stick shape and raises the melting point."),
+        ("Copernicia Cerifera Wax", "Structure wax", 1, 8, "Adds hardness and gloss."),
+        ("Cera Alba", "Structure wax", 2, 12, "Gives body and a smooth film."),
+        ("Mica", "Pearl and colour effect", 2, 20, "Adds shimmer and a soft glow."),
+        ("CI 77891", "Opacity pigment", 1, 10, "Makes colour opaque."),
+        ("Tocopherol", "Antioxidant", 0.05, 1, "Stops oils going rancid."),
+    ],
+    "foundation": [
+        ("Water", "Base", 30, 60, "Carries the formula and gives light texture."),
+        ("Cyclopentasiloxane", "Spreading silicone", 5, 25, "Spreads evenly then evaporates."),
+        ("Dimethicone", "Slip and smoothing", 2, 15, "Gives a smooth, blurred finish."),
+        ("Glycerin", "Humectant", 1, 8, "Keeps skin from feeling dry."),
+        ("CI 77891", "White pigment", 2, 15, "Gives coverage and lightens shades."),
+        ("CI 77491", "Colour pigment", 0.1, 5, "Matches skin shade."),
+        ("Phenoxyethanol", "Preservative", 0.3, 1, "Protects the water-based formula."),
+    ],
+    "moisturiser": [
+        ("Water", "Base", 50, 80, "Hydrates and carries other ingredients."),
+        ("Glycerin", "Humectant", 3, 10, "Pulls water into the skin."),
+        ("Cetearyl Alcohol", "Thickener and emollient", 1, 6, "Gives a creamy texture and softens skin."),
+        ("Caprylic/Capric Triglyceride", "Emollient", 2, 12, "Softens without feeling heavy."),
+        ("Glyceryl Stearate", "Emulsifier", 1, 5, "Keeps oil and water mixed."),
+        ("Dimethicone", "Occlusive", 0.5, 5, "Smooths and protects."),
+        ("Phenoxyethanol", "Preservative", 0.3, 1, "Keeps the cream safe from microbes."),
+    ],
+    "sunscreen": [
+        ("Zinc Oxide", "Mineral UV filter", 5, 25, "Blocks UVA and UVB."),
+        ("Titanium Dioxide", "Mineral UV filter", 2, 20, "Blocks UVB and short UVA."),
+        ("Butyl Methoxydibenzoylmethane", "Chemical UVA filter", 1, 3, "Absorbs long UVA rays."),
+        ("Ethylhexyl Salicylate", "Chemical UVB filter", 2, 5, "Absorbs UVB and helps dissolve other filters."),
+        ("Octocrylene", "Stabiliser and UV filter", 2, 10, "Keeps avobenzone stable."),
+        ("Glycerin", "Humectant", 1, 5, "Reduces tight, dry feel."),
+        ("Tocopherol", "Antioxidant", 0.1, 1, "Helps protect the formula."),
+    ],
+    "serum": [
+        ("Water", "Base", 60, 90, "Lightweight carrier."),
+        ("Glycerin", "Humectant", 2, 10, "Adds hydration."),
+        ("Niacinamide", "Active", 2, 10, "Evens tone and supports the barrier."),
+        ("Sodium Hyaluronate", "Humectant", 0.1, 2, "Holds water on skin."),
+        ("Propanediol", "Solvent and humectant", 2, 10, "Dissolves actives and adds slip."),
+        ("Xanthan Gum", "Thickener", 0.1, 0.5, "Gives a gel-like texture."),
+        ("Phenoxyethanol", "Preservative", 0.3, 1, "Keeps the serum stable."),
+    ],
+    "cleanser": [
+        ("Water", "Base", 60, 85, "Carries the formula."),
+        ("Cocamidopropyl Betaine", "Mild surfactant", 2, 10, "Cleans and makes gentle foam."),
+        ("Coco-Glucoside", "Gentle surfactant", 2, 10, "Lifts dirt without stripping."),
+        ("Sodium Laureth Sulfate", "Strong surfactant", 5, 20, "Strong foaming and cleansing in classic face washes."),
+        ("Glycerin", "Humectant", 2, 8, "Reduces the dry feel after washing."),
+        ("Citric Acid", "pH adjuster", 0.01, 1, "Keeps pH near skin's natural level."),
+        ("Phenoxyethanol", "Preservative", 0.3, 1, "Prevents microbe growth."),
+    ],
+    "shampoo": [
+        ("Water", "Base", 60, 85, "Carries the formula."),
+        ("Sodium Laureth Sulfate", "Main cleanser", 8, 20, "Strong foaming and cleansing of oil and dirt."),
+        ("Cocamidopropyl Betaine", "Co-surfactant", 2, 8, "Softens the cleanser and boosts foam."),
+        ("Sodium Chloride", "Thickener", 0.5, 3, "Thickens the shampoo."),
+        ("Panthenol", "Conditioning", 0.1, 1, "Adds shine and softness to hair."),
+        ("Parfum", "Fragrance", 0.2, 1, "Adds a pleasant scent."),
+        ("Citric Acid", "pH adjuster", 0.01, 1, "Balances pH for hair."),
+    ],
+    "mascara": [
+        ("Water", "Base", 30, 60, "Carries waxes and pigment."),
+        ("Cera Alba", "Wax", 5, 15, "Coats and thickens lashes."),
+        ("Copernicia Cerifera Wax", "Wax", 2, 8, "Adds hold and gloss."),
+        ("CI 77499", "Black pigment", 5, 15, "Gives deep black colour."),
+        ("Acacia Senegal Gum", "Film-former", 1, 5, "Helps the mascara hold curl."),
+        ("Stearic Acid", "Emulsifier", 1, 5, "Helps form a creamy emulsion."),
+        ("Phenoxyethanol", "Preservative", 0.3, 1, "Protects against microbes near the eyes."),
+    ],
+}
+
+# Retailer templates used to create demo buy links (placeholders, NOT real product pages).
+RETAILERS = ["Nykaa", "Amazon", "Purplle"]
